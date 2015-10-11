@@ -52,3 +52,6 @@ gem 'twitter'
 # hiding environment variables
 gem 'dotenv-rails'
 
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
+
