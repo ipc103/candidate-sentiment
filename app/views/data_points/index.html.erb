@@ -1,8 +1,9 @@
 <% @candidates.each do |candidate| %>
-  <h3><%= candidate.name %></h3>
-  <h6><%= candidate.twitter %></h6>
+  <h2><%= candidate.name %></h2>
+  <h3>Twitter Handle: <%= candidate.twitter %></h3>
   <ul>
     <% candidate.data_points.each do |data_point| %>
+    <h3>Date and Time: <%= data_point.created_at %></h3>
       <li>Candidate Twitter Positivity Rating: <%= data_point.tweet_sentiment %></li>
       <li>Candidate Tweeted About Rating: <%= data_point.tweeted_about_sentiment %></li>
     <% end %>
