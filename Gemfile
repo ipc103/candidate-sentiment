@@ -51,7 +51,6 @@ gem 'sentimentalizer'
 gem 'twitter'
 # hiding environment variables
 gem 'dotenv-rails'
-
+gem "d3-rails"
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
-
