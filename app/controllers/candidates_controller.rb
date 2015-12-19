@@ -11,7 +11,7 @@ class CandidatesController < ApplicationController
         { createdAt: data_point.created_at.strftime('%y-%m-%d'), 
           probability: data_point.tweeted_about_sentiment } 
       end
-    end.flatten
+    end.compact
     render json: sentiments
   end
 end
