@@ -28,7 +28,7 @@ $(function(){
         .x(function(d) { return x(d.createdAt); })
         .y(function(d) { return y(d.probability); });
 
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("div.graph").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")

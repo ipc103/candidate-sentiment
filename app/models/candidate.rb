@@ -10,4 +10,8 @@ class Candidate < ActiveRecord::Base
       end
     end.compact
   end
+
+  def average_tweeted_about_probability
+    data_points.average(:tweeted_about_sentiment).round(3)
+  end
 end

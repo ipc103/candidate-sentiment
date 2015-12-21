@@ -1,4 +1,21 @@
-<p id="cand_id"><%= @candidate.id %></p>
-<%= @candidate.name %>
+<div class="container">
+  <div class="row">
 
-<%= @candidate.twitter %>
+    <div class="col-xs-3">
+      <p id="cand_id" style="display:none"><%= @candidate.id %></p>
+      <h1><%= @candidate.name %></h1>
+      <ul>
+        <li>Twitter: <a href='<%= "https://www.twitter.com/#{@candidate.twitter}" %>'><%= @candidate.twitter %></a></li>
+        <li>Average Sentiment: <%= @candidate.average_tweeted_about_probability %></li>
+      </ul>
+      
+    </div>
+
+    <div class="col-xs-9">
+      <div class="graph"></div>
+    </div>
+
+  </div>
+
+</div>
+

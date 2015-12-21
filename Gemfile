@@ -51,6 +51,9 @@ gem 'sentimentalizer'
 gem 'twitter'
 # hiding environment variables
 gem 'dotenv-rails'
+# add d3 for charts
 gem "d3-rails"
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
