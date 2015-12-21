@@ -1,0 +1,5 @@
+<% @candidates.each do |candidate| %>
+  <h2><%= link_to candidate.name, candidate_path(candidate) %></h2>
+  <h3>Twitter Handle: <%= candidate.twitter %></h3>
+
+<% end %>

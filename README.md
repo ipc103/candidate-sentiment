@@ -7,4 +7,8 @@ The text of each tweet is analyzed and given a "probability", ranging from 0 (co
 Data Points on each candidate consist of two rankings: 
 
 1. An mean probability of their 20 most recent tweets at the time the data point was collected. 
-2. Mean probability of the 75 most recent tweets 
+2. Mean probability of the 75 most recent tweets mentioning that candidate
+
+NOTE: Positive sentiment in tweets mentioning a candidate don't neccessarily reflect positive feelings, ie. "Saw a pinata of Donald Trump today :-) " would register positive. 
+
+

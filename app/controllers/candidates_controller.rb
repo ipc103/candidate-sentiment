@@ -1,11 +1,18 @@
 class CandidatesController < ApplicationController
 
-  def show
-    @candidate = Candidate.find(params[:id])
+  before_action :set_candidate, only: [:show, :data]
+
+  def index
+    @candidates = Candidate.all
   end
 
   def data
-    @candidate = Candidate.find(params[:id])
     render json: @candidate.sentiments
+  end
+
+  private
+
+  def set_candidate
+    @candidate = Candidate.find(params[:id])
   end
 end
