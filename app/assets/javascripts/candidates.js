@@ -1,12 +1,19 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(function(){
+$(document).on('page:change', function(){
   var id = $('p#cand_id').text();
-  $.getJSON('/data/' + id, function(data){
+  if ( id !== "") {
+    loadDataGraph(id);
+  };
+
+})
+
+function loadDataGraph(id){
+    $.getJSON('/data/' + id, function(data){
 
     var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
+    width = 920 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%y-%m-%d").parse;
@@ -61,5 +68,4 @@ $(function(){
           .attr("class", "line")
           .attr("d", line);
     });
-
-})
+}

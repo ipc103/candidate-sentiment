@@ -1,8 +1,7 @@
-<div class="container">
   <div class="row">
 
     <div class="col-xs-3">
-      <p id="cand_id" style="display:none"><%= @candidate.id %></p>
+      <p id="cand_id" style="display:hidden"><%= @candidate.id %></p>
       <h1><%= @candidate.name %></h1>
       <ul>
         <li>Twitter: <a href='<%= "https://www.twitter.com/#{@candidate.twitter}" %>'><%= @candidate.twitter %></a></li>
@@ -17,5 +16,5 @@
 
   </div>
 
-</div>
+
 
