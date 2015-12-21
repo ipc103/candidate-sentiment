@@ -10,7 +10,6 @@ $(function(){
     height = 500 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%y-%m-%d").parse;
-    debugger;
     var x = d3.time.scale()
         .range([0, width]);
 
