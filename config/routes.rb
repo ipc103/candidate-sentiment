@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'
 
+  namespace :api do
+    namespace :v1 do
+      resources :candidates, only: [:index, :show]
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
